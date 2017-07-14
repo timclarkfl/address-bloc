@@ -15,7 +15,7 @@
      puts "2 - Create an entry"
      puts "3 - Search for an entry"
      puts "4 - Import entries from a CSV"
-     puts "5 - View entry n"
+     puts "5 - Destroy all entries"
      puts "6 - Exit"
      print "Enter your selection: "
  
@@ -42,7 +42,8 @@
          main_menu
        when 5
          system "clear"  
-         entry_n_submenu
+         address_book.destroy
+         puts "All entries destroyed!"
          main_menu
        when 6
          puts "Good-bye!"
@@ -217,6 +218,7 @@
       when "m"
          system "clear"
          main_menu
+         
       else
          system "clear"
          puts "#{selection} is not a valid input"
